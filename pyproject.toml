@@ -3,13 +3,17 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "updater"
+name = "update"
 version = "0.1.0"
-description = "updater"
+description = "McSkill update client"
 authors = [{ name = "Faticc", email = "komeristyj07@gmail.com" }]
 requires-python = ">=3.8"
 license = { text = "MIT" }
-dependencies = ["tqdm", "requests"]
+dependencies = [
+    "grpcio>=1.60.0",
+    "protobuf>=5.0.0",
+    "mcproto @ git+https://github.com/Faticc/mcproto.git"
+]
 
 [project.urls]
-Homepage = "https://github.com/Faticc/updater"
+Homepage = "https://github.com/Faticc/update"
